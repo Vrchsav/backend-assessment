@@ -17,11 +17,14 @@ app.use(cors(
 
 const db=require("./config/database");
 db.connect();
+require('./config/cronJob');
 
-const rout = require('./routes/check');
+const cryptoRoutes  = require('./routes/cryptoRoutes');
+
+// Use the routes
+app.use('/api', cryptoRoutes);
 
 
-app.use('/api/check', rout);
 
 
 app.listen(PORT, () => {
