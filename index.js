@@ -18,8 +18,10 @@ app.use(cors(
 const db=require("./config/database");
 db.connect();
 
+const rout = require('./routes/check');
 
 
+app.use('/api/check', rout);
 
 
 app.listen(PORT, () => {
