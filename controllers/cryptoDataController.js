@@ -1,6 +1,5 @@
-// controllers/cryptoDataController.js
 
-const Crypto = require('../models/cryptomodels'); // Import the crypto model
+const Crypto = require('../models/cryptomodels'); 
 
 // Controller function to get cryptocurrency data from the database
 exports.getCryptoData = async (req, res) => {
